@@ -1,0 +1,33 @@
+.formdiv{
+    margin: 2rem;
+}
+input{
+    padding: .5rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    display: block;
+}
+label{
+    font-size: 1.2rem;
+}
+button{
+    margin-top: .5rem;
+    font-size: 1.2rem;
+    padding: .5rem 1rem;
+    background: #0077ff;
+    color: #ffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+p{
+    margin: 2rem;
+    font-size: 1.2rem;
+}
+.inputError{
+    color: #ff0000;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: .2rem;
+    margin: 0rem;
+}
