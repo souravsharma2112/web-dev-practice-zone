@@ -1,45 +1,42 @@
-let outbox = document.getElementById("outBox")
-let nameBox = document.getElementById("name")
+let fname = document.getElementById("fname")
 let age = document.getElementById("age")
 let address = document.getElementById("address")
+let outBox = document.getElementById("outBox")
 let nameE = document.getElementById("nameE")
 let ageE = document.getElementById("ageE")
 let addressE = document.getElementById("addressE")
-let nameInput = false
-let ageInput = false
-let addressInput = false
 
 function formValidation(){
-    if(nameBox.value.length == 0){
-        nameInput = false
-        nameE.innerText = "Name is Required"
+    if(fname.value.length == 0){
+        nameE.innerText = "This Feild is Required"
     }
-    if(age.value.length == 0){
-        ageInput = false
-        ageE.innerText = "Age is Required"
+    else if(age.value.length == 0){
+        ageE.innerText = "This Feild is Required"
     }
-    console.log(address.innerText.length)
-    if(address.value.length == 0){
-        addressInput = false
-        addressE.innerText = "Address is Required"
+    else if(address.value.length == 0){
+        addressE.innerText = "This Feild is Required"
     }
-    if(nameBox.value.length > 0){
-        nameInput = true
+    else{
+        nameE.innerText = ""
+        ageE.innerText = ""
+        addressE.innerText = ""
+    }
+    
+}
+function functionValidation2(){
+    if(fname.value.length > 0){
         nameE.innerText = ""
     }
-    else if(ageBox.value.length > 0){
-        ageInput = true
+    else if(age.value.length > 0){
         ageE.innerText = ""
     }
     else if(address.value.length > 0){
-        addressInput = true
         addressE.innerText = ""
     }
 }
 
-function displayOutput() {
+function displayOutput(){
     formValidation()
-    if(nameInput && addressInput && ageInput){
-     outbox.innerText = `Hello! My name is ${nameBox.value} and I'm ${age.value} years old. I'm From ${address.value}`
-    }
+    let showData = `My Name is ${fname.value} and my age is ${age.value}. I'm from ${address.value}`
+    outBox.innerText = showData
 }
