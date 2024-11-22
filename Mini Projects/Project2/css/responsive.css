@@ -1,0 +1,55 @@
+
+@media (min-width:320px)  { 
+    /* smartphones, iPhone, portrait 480x320 phones */ 
+    body{
+        background: rgb(187, 0, 255);
+    }
+    body::after{
+        content: "smartphones, iPhone, portrait 480x320 phones";
+    }
+}
+@media (min-width:481px)  { 
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+    body{
+        background: rgb(0, 106, 255);
+    }
+    body::after{
+        content: "portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide.";
+    }
+}
+@media (min-width:641px)  {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+    body{
+        background: #ffcbcb;
+    }
+    body::after{
+        content: "portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones ";
+    }
+}
+@media (min-width:961px)  { 
+    /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+    body{
+        background: rgb(255, 74, 116);
+    }
+    body::after{
+        content: " tablet, landscape iPad, lo-res laptops ands desktops";
+    }
+}
+@media (min-width:1025px) {
+     /* big landscape tablets, laptops, and desktops */
+     body{
+        background: rgb(0, 255, 30);
+    }
+    body::after{
+        content: "big landscape tablets, laptops, and desktops ";
+    }
+ }
+@media (min-width:1281px) {
+     /* hi-res laptops and desktops */
+     body{
+        background: rgb(255, 129, 129);
+    }
+    body::after{
+        content: "hi-res laptops and desktops";
+    }
+ }

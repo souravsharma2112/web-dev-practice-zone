@@ -1,0 +1,56 @@
+@media (max-width:480px){
+    .container{
+        padding: 1rem 1rem;
+    }
+    nav{
+        padding: .7rem 1rem;
+    }
+    nav div p{
+        font-size: .7rem;
+    }
+    .section1 {
+        display: grid;
+        grid-template-columns: repeat(1 , 1fr);
+    }
+    .web-title h1 {
+        font-size: 18vw;
+        word-spacing: 8px;
+    }
+    .web-title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .section1 .sec_box {
+        display: grid;
+        grid-template-columns: repeat(1 , 1fr);
+    }
+    .sec_box .sec_sub_box:nth-child(2),
+    .sec3_box{
+        padding: 1rem;
+    } 
+    .sec_box .sec_sub_box p,
+    .sec3_box p {
+        font-size: .7rem;
+    } 
+    .sec_box .sec_sub_box h2,
+    .sec3_box h2 {
+        font-size: 1rem;
+    }
+    .disbox h1 {
+        font-size: 40px;
+    }
+    .section2 {
+        height: 275px;
+        margin: 0;
+    }
+    .banner_content h2 {
+        font-size: 13px;
+        letter-spacing: .1rem;
+    }
+    .section3 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0rem;
+    }
+}
