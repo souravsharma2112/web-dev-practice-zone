@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P8</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        margin: 0px auto;
+        width: 90%;
+        max-width: 1200px;
+        background-color: #ccc;
+        padding: 2rem;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .col-4{
+        border: 2px solid red;
+        width: 250px;
+        height: 100px;
+        text-align: center;
+        align-content: center;
+        background-color: #000c3f;
+        color: white;
+        border-radius: 6px;
+        flex-grow: 100;
+        /* flex-basis: 320px; */
+        /* flex-shrink: 1; */
+    }
+    .sd{
+        flex-shrink: 1;
+        /* flex-grow: 3; */
+
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-4 sd">1</div>
+            <div class="col-4">11</div>
+            <div class="col-4">1111</div>
+            <div class="col-4">111111</div>
+            <div class="col-4">121</div>
+            <div class="col-4">1211</div>
+            <div class="col-4">1245</div>
+            <div class="col-4">14</div>
+            <div class="col-4">21</div>
+            <div class="col-4">201</div>
+            <div class="col-4">20</div>
+        </div>
+    </div>
+</body>
+</html>

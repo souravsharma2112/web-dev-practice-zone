@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMRB Bank Account Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        .container {
+            width: 8.5in;
+            height: 11in;
+            margin: 0 auto;
+            padding: 1in;
+            border: 1px solid black;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .header h2 {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .instruction {
+            font-size: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        label {
+            font-size: 12px;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .input-full {
+            width: 100%;
+            padding: 5px;
+            font-size: 12px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .input-half {
+            width: 48%;
+            padding: 5px;
+            font-size: 12px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: none;
+            height: 50px;
+            width: 100%;
+            padding: 5px;
+            font-size: 12px;
+            border: 1px solid #ccc;
+        }
+
+        .submit-button {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-section {
+            margin-bottom: 20px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .row > div {
+            width: 48%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>STATE OF LOUISIANA</h1>
+            <h2>CASH MANAGEMENT REVIEW BOARD (R.S. 39:372)</h2>
+            <p><strong>BANK ACCOUNT APPLICATION FORM</strong></p>
+        </div>
+
+        <div class="instruction">
+            <p>Instructions: Answer all questions in order to avoid a delay in CMRB's review of application. If space is inadequate to complete response, use Continuation Sheet (CMRB002), enter item number and remainder of response.</p>
+        </div>
+
+        <div class="form-section">
+            <label for="agency">1. Applicant Agency</label>
+            <input type="text" id="agency" name="agency" class="input-full">
+
+            <label for="isis-number">2. ISIS Agency Number</label>
+            <input type="text" id="isis-number" name="isis-number" class="input-half">
+        </div>
+
+        <div class="form-section">
+            <label for="request-type">3. Request Type</label>
+            <select id="request-type" name="request-type" class="input-full">
+                <option value="new">Request for New Bank Account</option>
+                <option value="existing">Approval of Existing Bank Account</option>
+                <option value="change">Approval for Change</option>
+            </select>
+        </div>
+
+        <div class="form-section">
+            <label for="account-name">4. Account Name</label>
+            <input type="text" id="account-name" name="account-name" class="input-full">
+
+            <label for="bank-name">Bank Name and City</label>
+            <input type="text" id="bank-name" name="bank-name" class="input-full">
+        </div>
+
+        <div class="form-section">
+            <label for="compensation">5. Method of Compensation</label>
+            <input type="text" id="compensation" name="compensation" class="input-full">
+        </div>
+
+        <div class="form-section">
+            <label for="interest-bearing">6. Interest Bearing Account</label>
+            <select id="interest-bearing" name="interest-bearing" class="input-half">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+
+        <div class="form-section">
+            <label for="signer-name">13. Authorize Signer(s) for Bank Account</label>
+            <input type="text" id="signer-name" name="signer-name" class="input-full">
+
+            <label for="signer-phone">Phone Number</label>
+            <input type="text" id="signer-phone" name="signer-phone" class="input-half">
+
+            <label for="signer-title">Title</label>
+            <input type="text" id="signer-title" name="signer-title" class="input-half">
+
+            <label for="signer-email">Email Address</label>
+            <input type="email" id="signer-email" name="signer-email" class="input-full">
+        </div>
+
+        <div class="submit-button">
+            <button type="submit">Submit Application</button>
+        </div>
+    </div>
+</body>
+</html>

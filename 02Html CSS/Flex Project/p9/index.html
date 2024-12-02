@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex cards</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        /* align-content:baseline; */
+        /* align-self: center; */
+        justify-content: space-between;
+        gap: 1rem;
+        height: 100%;
+    }
+    .container{
+        width: 100%;
+        max-width: 1100px;
+        margin: 0px auto;
+        height: 500px;
+        background: #000;
+    }
+    .col{
+        flex-basis: 40%;
+        border: 1px solid red;
+        background-color: rebeccapurple;
+        color: white;
+        padding: 1rem;
+        /* margin: 0px 1px; */
+        flex-flow:column-reverse;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">1</div>
+            <div class="col">2</div>
+            <div class="col">3</div>
+            <div class="col">4</div>
+            <div class="col">5</div>
+            <div class="col">6</div>
+            <div class="col">7</div>
+            <div class="col">8</div>
+        </div>
+    </div>
+</body>
+</html>

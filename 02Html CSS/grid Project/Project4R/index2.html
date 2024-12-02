@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width: 100%;
+        max-width: 1200px;
+        margin: 0px auto;
+    }
+    .row{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .box{
+        width: 350px;
+        height: 350px;
+        background: red;
+        color: #fff;
+        text-align: center;
+        align-content: center;
+         font-size: 1.2rem;
+    }
+    .box7{
+        flex-grow: 1;
+    }
+    .box6{
+        flex-basis: 200px;
+        flex-shrink: 2;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box box6">6</div>
+            <div class="box box7">7</div>
+        </div>
+    </div>
+</body>
+</html>
