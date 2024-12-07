@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Allison&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  color: #ffff;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.left {
+  width: 40%;
+  height: 100%;
+  /* background: #ffb867; */
+  background: linear-gradient(90deg, rgba(255,208,98,1) 0%, rgba(251,255,113,1) 47%, rgba(249,195,100,1) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+}
+
+.left-content {
+  
+  text-align: center;
+}
+
+.left-content h1 {
+    font-family: "Allison", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 5rem;
+}
+.left-content h6 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+.right {
+  width: 60%;
+  height: 100%;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
+.right-sub {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: calc(100% / 3);
+}
+.right-sub div {
+  width: 50%;
+  align-content: center;
+  text-align: center;
+  font-size: 1.4rem;
+}
+.box1 {
+  background: linear-gradient(90deg, rgba(76,226,214,1) 0%, rgba(42,205,214,1) 47%, rgba(71,185,209,1) 100%);;
+}
+.box2 {
+  background: #ff92a4;
+}
+.box3 {
+  background: #aa51fc;
+}
+.box4 {
+  background: #fab636;
+}
+.box5 {
+  background: #8400ff;
+}
+.box6 {
+    background: linear-gradient(90deg, rgba(255,252,114,1) 0%, rgba(242,192,64,1) 47%, rgba(221,219,92,1) 100%);
+}
+.img-box {
+  width: 230px;
+  height: 450px;
+}
+.img-box img {
+  width: 100%;
+  height: 100%;
+}

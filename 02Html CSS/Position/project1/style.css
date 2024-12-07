@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background: #010830;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+.ring-container{
+    margin-top: 2rem;
+}
+.ring1{
+    position: relative;
+    left: 35px;
+    background: blueviolet;
+    z-index: -1;
+}
+.ring2{
+    background: #ffff8aad;
+    z-index: 2;
+}
+.ring3{
+    position: relative;
+    right: 35px;
+    background: #ff8a8ac7;
+    z-index: 3;
+}
+.ring4{
+    background: #b4ffb4ab;
+    position: relative;
+    left: 15px;
+    z-index: 1;
+}
+.ring5{
+    background: #9d9dff;
+    position: relative;
+    right: 15px;
+    z-index: -1;
+}
+.ring{
+    width: 210px;
+    height: 210px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+.top-ring,
+.bottom-ring{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottom-ring{
+    position: relative;
+    top: -65px;
+}

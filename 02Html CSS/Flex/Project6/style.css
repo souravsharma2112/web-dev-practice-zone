@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.sub-container{
+    width: 98%;
+    height: 96%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header{
+    background: turquoise;
+    height: 14.5%;
+    width: 100%;
+}
+header div{
+    height: 70%;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    font-size: 2.5rem;
+}
+nav{
+    background: teal;
+    height: 30%;
+    align-content: center;
+    text-align: center;
+}
+
+
+main{
+    height: 68%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+main .mainbox:nth-child(1){
+    height: 100%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+main .mainbox:nth-child(2){
+    background: #ca0f0f;
+    height: 100%;
+    width: 58%;
+}
+main .mainbox:nth-child(3){
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.mainbox1{
+    width: 100%;
+    height: 31.333%;
+    padding: 1rem;
+}
+.mainbox1:nth-child(1){
+    background: red;
+}
+.mainbox1:nth-child(2){
+    background: rgb(0, 234, 255);
+}
+.mainbox1:nth-child(3){
+    background: rgb(255, 0, 204);
+}
+
+
+.middle1,
+.middle5{
+    background: #ff6200;
+    height: 27%;
+    padding: 1rem;
+}
+.middle2,
+.middle4{
+    height: 13%;
+    padding: .5rem 1rem;
+    background: #ff8b43;
+}
+.middle3{
+    height: 20%;
+    background: palevioletred;
+    padding: 1rem;
+}
+.middle5{
+    background: #ff85ae;
+}
+
+
+.rightmaintop{
+    height: 58.5%;
+    display: flex;
+    justify-content: space-between;
+}
+.righttop{
+    width: 48%;
+    background: #ffff01;
+    text-align: center;
+}
+.rightmainbottom{
+    height: 38.5%;
+    background: #ffff01;
+    padding: .5rem 1rem;
+}
+.right-top-cat{
+    height: 20%;
+}
+.right-top-cat:nth-child(odd){
+    background: yellow;
+}
+.right-top-cat:nth-child(even){
+    background: #ffff8e;
+}
+footer{
+    background: turquoise;
+    height: 14.5%;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+}

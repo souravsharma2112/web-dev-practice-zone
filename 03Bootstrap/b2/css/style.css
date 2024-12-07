@@ -1,0 +1,139 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+.container{
+    max-width: 1260px !important;
+}
+ul{
+    list-style: none;
+    margin: 0rem !important;
+}
+a{
+    text-decoration: none !important;
+}
+.main-header{
+    padding: .5rem 0rem;
+}
+.main-header .container,
+footer .container{
+    padding: 0rem 0rem !important;
+}
+.header-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-menu{
+    display: flex;
+    gap: 1rem;
+}
+
+.section-banner{
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    background-image: url(../img/herobanner.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+.section-banner::before{
+    content : "";
+    position: absolute;
+    background: #000000;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    opacity: 0.5;
+}
+.section-banner .container{
+    position: relative;
+    z-index: 1000;
+    color: white;
+    top: 50%;
+    transform: translate(0px , -50%);
+}
+.section-banner .section-content{
+    width: 60%;
+}
+
+.section .section-content{
+    position: relative;
+    top: 50%;
+    transform: translate(0px , -50%);
+
+}
+.section-content h1{
+    font-size: 4rem;
+}
+.section{
+    padding: 5rem 0rem;
+}
+.about-section{
+    height: 600px;
+
+}
+.section-quote{
+    background-color: #010117;
+    color: #ffffff;
+}
+.section-quote .quote-content{
+    width: 80%;
+}
+.card{
+    border: none !important;
+}
+.card-body{
+    padding-left:0rem !important ;
+}
+.card img{
+    height: 250px;
+    width: 100%;
+}
+.section-contact{
+    background-color: #010117;
+    color: #ffffff;
+}
+.form-input{
+    display: flex;
+    flex-direction: column;
+    padding: 0.2rem 0rem;
+}
+.form-input textarea{
+    height: 150px;
+}
+.form-input input,
+.form-input textarea{
+    margin-top: .2rem;
+    background-color: #0e0e1e;
+    padding: .5rem .2rem;
+    border: none;
+    outline: none;
+}
+
+@media screen and (max-width:480px){
+    .section-banner{
+        height: 70vh;
+        background-position-x: 30%;
+    }
+    .section-banner .section-content{
+        width: 100%;
+    }
+    .section-content h1{
+        font-size: 2rem;
+    }
+    .section-content p{
+        font-size: 0.8rem;
+    }
+    .row{
+        flex-direction: column;
+    }
+}

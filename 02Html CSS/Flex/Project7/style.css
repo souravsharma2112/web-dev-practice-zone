@@ -1,0 +1,38 @@
+.box-container{
+    position: relative;
+    border: 2px solid red;
+    display: flex;
+}
+.box{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+.box1{
+    top: 0px;
+    left: 0px;
+    background: #ff8686;
+}
+.box2{
+    top: 0px;
+    left: 15%;
+    background-color: #9090ff;
+}
+.box3{
+    top: 0px;
+    left: 30%;
+    background-color: #90ffbb;
+}
+.box4{
+    top: 200px;
+    left: 8%;
+    background-color: #ffe990;
+
+}
+.box5{
+    top: 200px;
+    left: 24%;
+    background-color: #ff90f8;
+}

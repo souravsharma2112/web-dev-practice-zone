@@ -26,28 +26,10 @@ a{
 .section1 .container{
     height: 200px;
 }
-.section2 .container{
+.box{
     height: 300px;
 }
-.col-4{
-    width: 31.90% !important;
-}
-.col-6{
-    /* border: 1px solid red; */
-    background-color: blue !important;
-}
+
 h5{
     margin-bottom: 0px !important;
-}
-.g-col-4{
-    background: #000;
-}
-.row>* {
-    flex-shrink: 0;
-    width: 100%;
-    max-width: 100%;
-    padding-right: 0px !important;
-    padding-left: 0px !important;
-    /* margin-top: var(--bs-gutter-y); */
-    margin-top: 0px !important;
 }
