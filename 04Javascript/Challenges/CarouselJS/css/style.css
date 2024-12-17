@@ -4,50 +4,85 @@
     box-sizing: border-box;
 }
 
-
+body{
+    background: #070738;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
 .carousel{
     position: relative;
+    width: 80%;
+    height: 500px;
+    display: flex;
     overflow: hidden;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 12px;
+    box-shadow: rgb(255, 254, 254) -2px 0px 26px 7px;
 }
 .carousel-container{
-    width: 300vw;
     display: flex;
-    z-index: -1;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+    width: 100%;
+    /* transform: translateX(-200%); */
 }
-.carousel-btn{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    z-index: 2000;
-}
-button{
-    background-color: transparent;
-    border: none;
-    outline: none;
-    padding: 1rem;
-    cursor: pointer;
-}
-.carousel-btn button{
-    font-size: 5rem;
-}
-.carousel-btn button:hover{
-    color: gray;
-}
-.image{
-    overflow-x: 200%;
-}
-.image{
-    width: 100vw;
-    height: auto;
-}
-img{
+.slide,
+.slide image{
     width: 100%;
     height: 100%;
 }
-.carousel-container{
-   transform: translateX(0vw);
+.carousel-btn{
+    position: absolute;
+    z-index: 5000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.c-btn{
+    width: 250px;
+    font-size: 5rem;
+    background-color: transparent;
+    color: #ffff;
+    border: transparent;
+    outline: none;
+    height: 100%;
+    cursor: pointer;
+}
+.c-btn:nth-child(1){
+    border-top-right-radius: 250px;
+    border-bottom-right-radius:250px;
+}
+.c-btn:nth-child(2){
+    border-top-left-radius: 250px;
+    border-bottom-left-radius:250px;
+}
+.c-btn:hover{
+    background-color: #0000001c;
+    transition: .5s ease;
+}
+.carousel-i-btn{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    gap: 10px;
+    bottom: 20px;
+    z-index: 5000;
+}
+
+.indicator{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: transparent;
+    transition: background 0.3 ease;
+}
+.indicator.active {
+    background: white;
 }

@@ -9,26 +9,22 @@
 </head>
 
 <body>
-
     <div class="carousel">
         <div class="carousel-btn">
-            <button id="btn1" class="c-btn"><</button>
-            <button id="btn2" class="c-btn">></button>
+            <button id="btn1" class="c-btn"> &lt; </button>
+            <button id="btn2" class="c-btn"> &gt;</button>
         </div>
         <div id="carousel" class="carousel-container">
-            <div class="image">
-                <img src="https://picsum.photos/id/221/1400/500" alt="">
-            </div>
-            <div class="image">
-                <img src="https://picsum.photos/id/312/1400/500" alt="">
-            </div>
-            <div class="image">
-                <img src="https://picsum.photos/id/220/1400/500" alt="">
-            </div>
+            <div class="slide"><img src="https://picsum.photos/id/1011/1400/500" alt="Image 1"></div>
+            <div class="slide"><img src="https://picsum.photos/id/1012/1400/500" alt="Image 2"></div>
+            <div class="slide"><img src="https://picsum.photos/id/1013/1400/500" alt="Image 3"></div>
+        </div>
+        <div class="carousel-i-btn">
+            <button class="indicator" data-index="0"></button>
+            <button class="indicator" data-index="1"></button>
+            <button class="indicator" data-index="2"></button>
         </div>
     </div>
-<p id="show"></p>
     <script src="./js/index.js"></script>
 </body>
-
 </html>

@@ -1,40 +1,48 @@
-const btn = document.querySelectorAll(".c-btn")
+const slideCbtn = document.querySelectorAll(".c-btn");
 const carousel = document.getElementById("carousel")
-let max = 0
-btn[0].addEventListener("click",()=>{
-    if(max==0){
-        max=300
-    }
-    max = max - 100
-    carousel.style.transform = `translateX(-${max}vw)`
-    
-    console.log("btn click");
-    document.getElementById("show").innerHTML = max
+const totalSlides = document.querySelectorAll('.slide').length;
+const indicators = document.querySelectorAll('.indicator');
+console.log(slideCbtn);
+let index = 0
+
+function updateCarousel(index){
+    carousel.style.transform = `translateX(-${index * 100}%)`
+    indicators.forEach((indicator, i)=>{
+        indicator.classList.toggle("active", i === index)
+    })
+}
+
+slideCbtn[0].addEventListener("click",()=>{
+    index = (index - 1 + totalSlides)%totalSlides
+    updateCarousel(index)
 })
-btn[1].addEventListener("click",()=>{
-   
-    max = max+100
-    // console.log(trab);
-    
-    if(max==300){
-        max=0
-    }
-    carousel.style.transform = `translateX(-${max}vw)`
-    document.getElementById("show").innerHTML = max
-    const computedStyle = window.getComputedStyle(carousel);
-    const transformMatrix = computedStyle.getPropertyValue("transform");
-    if (transformMatrix && transformMatrix !== "none") {
-        const values = transformMatrix.match(/matrix\(([^)]+)\)/)[1].split(', ');
-        const scaleX = parseFloat(values[0]);
-        const skewY = parseFloat(values[1]);
-        const skewX = parseFloat(values[2]);
-        const scaleY = parseFloat(values[3]);
-        const translateX = parseFloat(values[4]);
-        const translateY = parseFloat(values[5]);
-      
-        console.log("ScaleX:", scaleX);
-        console.log("ScaleY:", scaleY);
-        console.log("TranslateX:", translateX);
-        console.log("TranslateY:", translateY);
-      }
+slideCbtn[1].addEventListener("click",()=>{
+    index = (index + 1)%totalSlides
+    updateCarousel(index)
 })
+indicators.forEach((indicator)=>{
+    indicator.addEventListener('click', (e) => {
+        index = parseInt(e.target.getAttribute('data-index'));
+        updateCarousel(index)
+    });
+})
+setInterval(()=>{
+    slideCbtn[1].click()
+},5000)
+
+// let autoSlide = setInterval(() => {
+//     nextBtn.click();
+// }, 5000);
+
+// // Pause Auto Slide on Interaction
+// [prevBtn, nextBtn, ...indicators].forEach((btn) => {
+//     btn.addEventListener('mouseenter', () => clearInterval(autoSlide));
+//     btn.addEventListener('mouseleave', () => {
+//         autoSlide = setInterval(() => {
+//             nextBtn.click();
+//         }, 5000);
+//     });
+// });
+
+// // Initialize
+// updateCarousel(currentIndex);
