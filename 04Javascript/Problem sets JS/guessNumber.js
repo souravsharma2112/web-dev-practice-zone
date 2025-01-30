@@ -13,7 +13,6 @@ while (true) {
         console.log("Game is Started now.....");
         console.log("Done👍");
         console.log("----------------------");
-        console.log(computerNo);
         
         let attempt = 3;        
         for (let i = 1; i <= 3; i++) {

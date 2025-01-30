@@ -1,0 +1,15 @@
+
+.carousel{
+    display: flex;
+    gap: 2rem;
+    width: 700px;
+    border: 2px solid red;
+    border-radius: 12px;
+    padding: 1rem;
+    overflow: scroll;
+}
+.box{
+    width: 350px !important;
+    height: 150px;
+    background-color: aqua;
+}

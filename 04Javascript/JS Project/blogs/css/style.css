@@ -1,0 +1,39 @@
+.banner-blog{
+    /* height: 60vh; */
+    border: 1px solid #ccc;
+    padding: 4rem 2rem;
+}
+img{
+    width: 100% ;
+    height: 100% ;
+}
+.banner-sub-box{
+    padding: 0rem 2rem;
+}
+.blog-container{
+    position: relative;
+    padding: 2rem;
+}
+.blog-close-btn{
+    position: absolute;
+    right: 0%;
+    top: 5%;
+}
+#readMorePage{
+    position: absolute;
+    background-color: #a4f9ffee;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    /* bottom: 0%; */
+    width: 100%;
+
+}
+
+p{
+    text-align: justify;
+}
+.force-full-height {
+    height: 100vh !important;
+    overflow-y: scroll; /* Optional: Prevent scrolling */
+  }

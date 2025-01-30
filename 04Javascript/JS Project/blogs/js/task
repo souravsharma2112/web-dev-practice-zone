@@ -1,0 +1,60 @@
+
+1. Dynamic Blog Generator
+   Challenge: Use JavaScript to dynamically create and render HTML content for each blog post from the array of objects.
+   Skills Practiced: DOM manipulation, forEach/map methods, and template literals.
+
+2. Search Functionality
+   Challenge: Add a search bar to filter blog posts by the person's name, location, or stream.
+   Skills Practiced: Event listeners, array filtering, string methods, and DOM updates.
+
+3. Sorting Feature
+   Challenge: Implement sorting options (e.g., by name, age, or location).
+   Skills Practiced: Array sorting (sort()), and DOM re-rendering.
+
+4. Pagination System
+   Challenge: Divide the blogs into pages, showing only a few entries per page with next/previous navigation.
+   Skills Practiced: Array slicing, event listeners, and state management.
+
+5. Edit and Delete Blog Posts
+   Challenge: Add buttons to edit or delete individual blog posts. Store the changes temporarily in the array.
+   Skills Practiced: Object manipulation, DOM updates, and event handling.
+
+6. Add New Blog Posts
+   Challenge: Create a form to add new entries to the blog dynamically.
+   Skills Practiced: Form validation, array modification (push()), and re-rendering DOM elements.
+
+7. Like and Comment System
+   Challenge: Add a "like" button and a comment section for each blog post. Store the likes and comments in the respective object.
+   Skills Practiced: Event listeners, array/object updates, and conditional rendering.
+
+8. API Integration
+   Challenge: Simulate fetching the data array from an external API (use fetch() and mock API services like JSONPlaceholder).
+   Skills Practiced: Asynchronous JavaScript, Promises, and API handling.
+
+9. Parent-Child Relationships
+   Challenge: Display blogs for parents and their children separately. For example, create a section for "Children's Blogs" based on the pChildren array.
+   Skills Practiced: Nested array/object iteration and dynamic rendering.
+
+10. Dark Mode/Theme Switcher
+    Challenge: Add a toggle for light and dark modes. Save the theme preference using localStorage.
+    Skills Practiced: CSS manipulation, event listeners, and localStorage.
+
+11. Animated Loading Screen
+    Challenge: Add a loading spinner or skeleton loaders while the blogs are being fetched/rendered.
+    Skills Practiced: CSS animations, DOM manipulation, and state management.
+
+12. Drag-and-Drop Sorting
+    Challenge: Allow users to drag and drop blog posts to reorder them.
+    Skills Practiced: Drag-and-drop API, DOM manipulation, and array reordering.
+
+13. Export and Import Blog Data
+    Challenge: Allow users to download the blog data as a JSON file and upload it back to populate the blogs.
+    Skills Practiced: File handling, JSON conversion, and DOM re-rendering.
+
+14. Blog Analytics
+    Challenge: Create a dashboard to display analytics, like the most liked blog or the average age of people in the dataset.
+    Skills Practiced: Array methods (reduce(), map()), and chart libraries (e.g., Chart.js).
+
+15. Use Modular JavaScript
+    Challenge: Split your code into multiple JavaScript modules for better organization (e.g., data handling, UI rendering, event listeners).
+    Skills Practiced: ES6 modules, import/export, and code structuring.

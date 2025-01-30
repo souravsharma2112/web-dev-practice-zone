@@ -1,0 +1,96 @@
+import apiData from './blogNewData.mjs';
+
+// DOM Elements
+const mainBlogContainer = document.getElementById("mainBlogContainer");
+const readMorePage = document.getElementById("readMorePage");
+const closeReadMorePage = document.getElementById("closeReadMorePage");
+const searchBtn = document.getElementById("searchBtn");
+const searchInput = document.querySelector("input");
+
+// Utility: Create Blog Card
+function createBlogCard(blog, index) {
+  const card = document.createElement("div");
+  card.classList.add("col-4");
+
+  card.innerHTML = `
+    <div class="card">
+      <img src="./image/cat.jpg" class="card-img-top" alt="${blog.name}">
+      <div class="card-body">
+        <h5 class="card-title">${blog.name}</h5>
+        <p class="card-text">${blog.characterDetails.substring(0, 150)}...</p>
+        <button class="btn btn-primary readMoreBtn" data-index="${index}">Read More</button>
+      </div>
+    </div>
+  `;
+
+  return card;
+}
+
+// Utility: Populate Read More Modal
+function populateReadMorePage(data) {
+  readMorePage.querySelector(".read-more-title").textContent = `${data.name}'s Journey`;
+  readMorePage.querySelector(".read-more-details").innerHTML = `
+    <h2>Hi! I'm ${data.name}</h2>
+    <p>${data.aboutUs}</p>
+    <p>
+      Meet my father, Mr. ${data.parent.father.name}, a ${data.parent.father.age}-year-old ${data.parent.father.occupation}.
+      And my mother, Mrs. ${data.parent.mother.name}, a ${data.parent.mother.age}-year-old ${data.parent.mother.occupation}.
+    </p>
+    <p>
+      I have ${data.parent.pChildren.length} siblings: ${data.parent.pChildren.map(e => e.childName).join(", ")}.
+      ${data.parent.pChildren.map(e => `${e.childName} is ${e.childAge} years old and enjoys ${e.childHobby.join(", ")}.`).join(" ")}
+    </p>
+    <p>${data.futurePlan.futureDesc}</p>
+    <p>What's in Mind: ${data.futurePlan.futurePlanning.whatisinMind}</p>
+    <p>Steps Taken:</p>
+    <ul>
+      ${data.futurePlan.futurePlanning.stepsTaken.map((step, i) => `<li>${i + 1}. ${step.steps} (Requirements: ${step.requirementsNeeded})</li>`).join("")}
+    </ul>
+    <p>${data.characterDetails}</p>
+  `;
+}
+
+// Render Blogs
+function renderBlogs(data) {
+  mainBlogContainer.innerHTML = ""; // Clear container
+  const fragment = document.createDocumentFragment();
+
+  data.forEach((blog, index) => {
+    const card = createBlogCard(blog, index);
+    fragment.appendChild(card);
+  });
+
+  mainBlogContainer.appendChild(fragment);
+}
+
+// Handle Read More Click
+function handleReadMoreClick(event) {
+  const target = event.target;
+  if (target.classList.contains("readMoreBtn")) {
+    const index = target.dataset.index;
+    populateReadMorePage(apiData[index]);
+    readMorePage.style.display = "block";
+  }
+}
+
+// Search Blogs
+function searchBlogs() {
+  const query = searchInput.value.trim().toLowerCase();
+  const filteredData = query
+    ? apiData.filter(blog => blog.name.toLowerCase().includes(query))
+    : apiData;
+
+  renderBlogs(filteredData);
+}
+
+// Event Listeners
+closeReadMorePage.addEventListener("click", () => {
+  readMorePage.style.display = "none";
+});
+
+searchBtn.addEventListener("click", searchBlogs);
+
+mainBlogContainer.addEventListener("click", handleReadMoreClick);
+
+// Initial Render
+renderBlogs(apiData);

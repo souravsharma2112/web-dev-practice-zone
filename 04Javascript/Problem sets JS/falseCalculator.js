@@ -1,4 +1,4 @@
-// False Calculator it will work some time correctly some time not
+// Falsee Calculator it will work some time correctly some time not
 console.log("For Addition Press 1")
 console.log("For Subtraction Press 2")
 console.log("For Multiplication Press 3")
@@ -65,6 +65,4 @@ for (let i = 0; i < 10; i++) {
        }
        break;
    }
-    
-    
 }
